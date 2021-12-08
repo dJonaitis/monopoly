@@ -1,12 +1,4 @@
 #import playerNum from char select
-class Player:
-    def __init__(self, playerID, balance, ownedProperty, icon=""):
-        self.playerID = playerID
-        self.icon = icon
-        self.balance = balance
-        self.ownedProperty = ownedProperty
-
-players = []
 
 playerNum = 2# take player num from character selection
 for i in range(playerNum): #gives every player starting stats

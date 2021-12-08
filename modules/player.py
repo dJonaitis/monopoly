@@ -1,3 +1,6 @@
+import random
+random.seed(a=None, version=2)
+
 class Player:
     def __init__(self, playerID, balance=1500, ownedProperty=[], icon="", position=0, inJail=False):
         self.playerID = playerID
@@ -5,9 +8,31 @@ class Player:
         self.balance = balance
         self.ownedProperty = ownedProperty
         self.position = 0
+    
+    def roll(self):
+        players = []
+        min = 1 
+        max = 6
 
-def loadPlayers(playerNum):
-    players = []
+        for i in range (3):
+            roll1 = random.randint(min, max)
+            roll2 = random.randint(min, max)
+
+            if(not self.inJail):
+                self.position += roll1 + roll2
+
+            if(roll1 == roll2 and self.inJail):
+                self.inJail = False
+                self.position += roll1 + roll2
+                return
+
+            if(roll1 != roll2):
+                return
+            
+
+
+def loadPlayers(self, playerNum):
+    
 
     for i in range(playerNum):
         user = Player(i)

@@ -18,7 +18,7 @@ class Player:
         for i in range (3):
             roll1 = random.randint(min, max)
             roll2 = random.randint(min, max)
-
+            
             if(not self.inJail):
                 self.position += roll1 + roll2
 

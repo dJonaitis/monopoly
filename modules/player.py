@@ -12,7 +12,6 @@ class Player:
         self.inJail = inJail
     
     def roll(self):
-        players = []
         min = 1 
         max = 6
 
@@ -34,7 +33,7 @@ class Player:
 
 
 def loadPlayers(self, playerNum):
-    
+    players = []
 
     for i in range(playerNum):
         user = Player(i)

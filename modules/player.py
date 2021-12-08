@@ -28,11 +28,10 @@ class Player:
                 return
 
             if(roll1 != roll2):
-                return
-            
+                return   
 
 
-def loadPlayers(self, playerNum):
+def loadPlayers(playerNum):
     players = []
 
     for i in range(playerNum):

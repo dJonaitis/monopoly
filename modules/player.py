@@ -4,7 +4,8 @@ class Player:
         self.icon = icon
         self.balance = balance
         self.ownedProperty = ownedProperty
-        self.position = 0
+        self.position = position
+        self.inJail = inJail
 
 def loadPlayers(playerNum):
     players = []

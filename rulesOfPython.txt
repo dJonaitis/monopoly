@@ -1,0 +1,5 @@
+1. Use indentation
+2. You probably forgot :
+3. Use whitespace
+4. lowercase, except True and False
+5. Python is weird

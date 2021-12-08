@@ -1,1 +1,3 @@
 import graphicsManager
+
+players = []

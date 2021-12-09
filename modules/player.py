@@ -15,12 +15,20 @@ class Player:
         min = 1 
         max = 6
 
-        for i in range (3):
+        for i in range (4):
             roll1 = random.randint(min, max)
             roll2 = random.randint(min, max)
-            
+            if(i == 4):
+                self.inJail = True
+                self.position = 10
+                return
+                
             if(not self.inJail):
                 self.position += roll1 + roll2
+                if(self.position == 30):
+                    self.inJail = True
+                    self.position = 10
+                    return
 
             if(roll1 == roll2 and self.inJail):
                 self.inJail = False
@@ -28,7 +36,7 @@ class Player:
                 return
 
             if(roll1 != roll2):
-                return   
+                return
 
 
 def loadPlayers(playerNum):

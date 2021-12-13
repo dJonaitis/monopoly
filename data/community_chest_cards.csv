@@ -1,3 +1,16 @@
-﻿description,monetary_gain,go_location,jail_free
+description,monetary_gain,go_location,jail_free
 Advance to Go,200,go,FALSE
-"Go to Jail. Go directly to Jail, do not pass Go, do not collect",0,prison,FALSE
+"Go to Study Hall. If you pass Go, do not collect.",0,jail,FALSE
+200€ fall into your hands from the sky. Collect 200€.,200,FALSE,FALSE
+"Your notebooks fall into a puddle, you need to buy new ones. Pay 50€",-50,FALSE,FALSE
+You sell your old textbooks. Collect 50€.,50,FALSE,FALSE
+Get out of Study Hall for free!,0,FALSE,TRUE
+You worked as a tutor for a lower grade. Collect 200€,200,FALSE,FALSE
+It is your birthday. Collect 20€ from every player.,20*players,FALSE,FALSE
+"Your schoolbook came torn, you get a 20€ refund.",20,FALSE,FALSE
+Pay school fees of 300€.,-300,FALSE,FALSE
+Pay hospital fees of 100€,-100,FALSE,FALSE
+Furniture fee. Pay 40€ per chair and 115€ per table.,,FALSE,FALSE
+You won the second prize in a school olympiad. Collect 10€.,10,FALSE,FALSE
+You won the pumpkin carving contest. Collect 100€.,100,FALSE,FALSE
+You destroyed the grade 11 bathroom. Pay 100€.,-100,FALSE,FALSE

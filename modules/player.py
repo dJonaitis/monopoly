@@ -2,9 +2,9 @@ import random
 import tiles
 
 tile = tiles.Tile
-prop = tiles.Property
 
 random.seed(a=None, version=2)
+
 
 class Player:
     def __init__(self, playerID, balance=1500, ownedProperty=[], icon="", position=0, inJail=False):
@@ -44,22 +44,21 @@ class Player:
                 return
 
 
-    def payRent(self,tile,prop,playerNum):
+    def payRent(self,tile,landlord): #access class Tile and class Property
         if (tile.type== 'property'):
-            if (prop.ownerID >-1 ):
-                if(prop.ownerID != self.playerID):
-                    for i in range(playerNum): #finds owner
-                        if(tile.ownerID == i): #pay rent
-                            Player(i).balance += prop.rentCost
-                            self.balance -= prop.rentCost
-                            break
+            if (tile.property.ownerID >-1 ):
+                if(tile.property.ownerID != self.playerID):
+                    landlord.balance += tile.property.rentCost #pay rent
+                    self.balance -= tile.property.rentCost 
+                    
             else: #buy property. Note to self: Add prompt to ask if you wanna buy
-                self.buy(tile,prop)
+                self.buy(tile)
 
-
-    def buy(self,tile,prop):
-        if (tile.type == 'property'): #neccessary because this function is also for buying houses
-                self.ownedProperty = tile.tileID
-                self.balance -= prop.price
-
-        #how does buying houses work?
+    def buyProperty(self,tile):
+        self.ownedProperty = tile.tileID
+        tile.property.ownerID = self.playerID
+        self.balance -= tile.property.price
+    
+    def buyHouse(self, tile):
+        tile.property.houseNumber += 1
+        self.balance -= tile.property.housePrice

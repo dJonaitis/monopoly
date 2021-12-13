@@ -17,3 +17,6 @@ class Tile:
         self.tileID = tileID
         self.type = type
         self.property = property
+
+def initialize():
+    pass

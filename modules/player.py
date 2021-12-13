@@ -62,3 +62,6 @@ class Player:
     def buyHouse(self, tile):
         tile.property.houseNumber += 1
         self.balance -= tile.property.housePrice
+
+def initialize():
+    pass

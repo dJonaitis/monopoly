@@ -1,2 +1,4 @@
-import modules.graphics.colors as colors
-import graphicManager as gm
+import graphics.colors as colors
+import graphics.manager as gm
+
+gm.gameMenu()

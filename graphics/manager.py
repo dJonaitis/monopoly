@@ -1,6 +1,7 @@
 import pygame
 
 SCREEN_DIMENSIONS = [1440, 810]
+WINDOW_CAPTION = "Monopoly VIS Edition"
 
 def gameMenu():
   pygame.init()
@@ -14,6 +15,8 @@ def gameMenu():
           if event.type == pygame.QUIT:
               running = False
 
+      pygame.display.set_caption(WINDOW_CAPTION)
+
       # Fill the background with white
       screen.fill((255, 255, 255))
 
@@ -21,7 +24,7 @@ def gameMenu():
       pygame.draw.circle(screen, (0, 0, 255), (250, 250), 75)
 
       # Flip the display
-      pygame.display.flip()
+      pygame.display.update()
 
   # Done! Time to quit.
   pygame.quit()

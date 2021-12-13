@@ -11,7 +11,7 @@ cards = {
 }
 
 icons = [] # must be defined in the selection screen, when choosing icons
-players = player.initialize(len(icons), icons)
+players = player.initialize(icons)
 
 print(cards["chest"][3].description)
 #gm.gameMenu()

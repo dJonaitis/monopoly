@@ -63,10 +63,10 @@ class Player:
         self.balance -= tile.property.housePrice
 
 
-def initialize(playerCount, icons):
+def initialize(icons):
     playerArr = []
 
-    for i in range(playerCount):
+    for i in range(len(icons)): # length of icons represents the number of players
         newPlayer = Player(i, icon=icons[i])
         playerArr.append(newPlayer)
     

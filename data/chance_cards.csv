@@ -1,3 +1,3 @@
 ﻿description,monetary_gain,go_location,jail_free
-Advance to Go,200,go,FALSE
-"Go to Jail. Go directly to Jail, do not pass Go, do not collect",0,prison,FALSE
+Advance to Go,200,go,0
+"Go to Jail. Go directly to Jail, do not pass Go, do not collect",0,prison,0

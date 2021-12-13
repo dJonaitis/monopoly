@@ -1,0 +1,16 @@
+description,monetary_gain,go_location,jail_free
+Advance to Go,200,go,1
+"Go to Study Hall. If you pass Go, do not collect.",0,jail,0
+200 fall into your hands from the sky. Collect 200,200,,0
+"Your notebooks fall into a puddle, you need to buy new ones. Pay 50",-50,,0
+You sell your old textbooks. Collect 50,50,,0
+Get out of Study Hall for free!,0,,1
+You worked as a tutor for a lower grade. Collect 200,200,,0
+It is your birthday. Collect 20 from every player.,20*{len(players)},,0
+"Your schoolbook came torn, you get a 20 refund.",20,,0
+Pay school fees of 300,-300,,0
+Pay hospital fees of 100,-100,,0
+Furniture fee. Pay 40 per chair and 115 per table.,-(40*{len(players[turn].chairs)}+115*{len(players[turn].tables)},,0
+You won the second prize in a school olympiad. Collect 10,10,,0
+You won the pumpkin carving contest. Collect 100,100,,0
+You destroyed the grade 11 bathroom. Pay 100,-100,,0

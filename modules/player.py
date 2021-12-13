@@ -5,7 +5,6 @@ tile = tiles.Tile
 
 random.seed(a=None, version=2)
 
-
 class Player:
     def __init__(self, playerID, balance=1500, ownedProperty=[], icon="", position=0, inJail=False):
         self.playerID = playerID
@@ -63,5 +62,12 @@ class Player:
         tile.property.houseNumber += 1
         self.balance -= tile.property.housePrice
 
-def initialize():
-    pass
+
+def initialize(playerCount, icons):
+    playerArr = []
+
+    for i in range(playerCount):
+        newPlayer = Player(i, icon=icons[i])
+        playerArr.append(newPlayer)
+    
+    return playerArr

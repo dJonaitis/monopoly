@@ -9,7 +9,7 @@ def initialize(cardType):
 
     """ This function should be run twice: once for treasure, once for chance """
 
-    file = open(f"./data/{cardType}_cards.csv", "r")
+    file = open(f"./assets/sheets/{cardType}_cards.csv", "r")
     content = file.read()
     file.close()
 

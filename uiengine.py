@@ -127,8 +127,6 @@ class Cookie_Surface(Image_Surface):
         self.y_velocity = random.randint(-10, 10)/1000 # assign a random y velocity
         self.angle_velocity = random.randint(-10, 10) # assign a random spin velocity
 
-
-
 class Start_Menu():
     
 
@@ -194,17 +192,15 @@ class Start_Menu():
     
         game.screen.blit(s_cursor.surface, (cursor_x - s_cursor.surface_width//2, cursor_y - s_cursor.surface_width//2))
 
-
 game = Game() # initialise game object
 music = Music() # initialise music object
 start_menu = Start_Menu() # initialise start menu object
 
 start_menu.get_cookies(200) # make 200 cookies!
 
-
-###################################
-##     Loading images... 61%     ##
-###################################
+"""
+Image assets
+"""
 
 s_cf = Image_Surface('./assets/images/cookiefactory.jpg', 1)
 s_logo = Image_Surface('./assets/images/logo.png', 0.6)
@@ -212,8 +208,8 @@ s_play_button_unpressed = Image_Surface('./assets/images/buttons/playbutton.png'
 s_play_button_pressed = Image_Surface('./assets/images/buttons/playbuttondark.png', 0.2)
 s_cursor = Image_Surface('./assets/images/cursor.png', 0.04)
 
-
 music.load('./assets/music/Unreal_Super_Hero_3_by_Kenet_Rez.mp3')
+
 while game.code_running: # until pygame is asked to quit:
    
    

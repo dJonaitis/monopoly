@@ -1,7 +1,5 @@
 import random
-import tiles
-
-tile = tiles.Tile
+from .tiles import Tile as tile
 
 random.seed(a=None, version=2)
 

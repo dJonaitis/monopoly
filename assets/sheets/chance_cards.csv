@@ -1,17 +1,17 @@
-description,monetary_gain,go_location,jail_free
-Advance to go,200,go,FALSE
-Advance to english room,200,english room,FALSE
-Advance to atrium,0,atrium,FALSE
-Ms Asta's office,200,Ms Asta's office,FALSE
-"Talk to the nearest teacher. If unemployed, you may employ them. If employed, pay the employer twice the meeting price.",2*rent,{nearest teacher},FALSE
-"Talk to the nearest teacher. If unemployed, you may employ them. If employed, pay the employer twice the meeting price.",2*rent,{nearest teacher},FALSE
-"Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times amount thrown.",10*roll,{nearest utility},FALSE
-Bank pays you dividend of £50,50,,FALSE
-Get out of Study Hall for free!,0,,TRUE
-Go back three spaces,0,position-3,FALSE
-"Go to Study Hall. Go directly to Study Hall, do not pass Go, do not collect £200",0,jail,FALSE
-"Make general repairs on all your furniture. For each chair pay 25, for each table pay 100",-(40*{len(players[turn].chairs)}+115*{len(players[turn].tables)},,FALSE
-Running fine! Pay 15,-15,,FALSE
-Talk to {3rd teacher},200,{3rd teacher},FALSE
-You're elected school president. Pay each player 50,-50*playerCount,,FALSE
-Your furniture loan matures. Collect 150,150,,FALSE
+description#monetary_gain#go_location#jail_free
+Advance to go#200#go#0
+Advance to english room#200#english room#0
+Advance to atrium#0#atrium#0
+Advance to Ms Asta's office#200#Ms Asta's office#0
+Talk to the nearest teacher. If unemployed, you may employ them. If employed, pay the employer twice the meeting price.#2*rent#{nearest teacher}#0
+Talk to the nearest teacher. If unemployed, you may employ them. If employed, pay the employer twice the meeting price.#2*rent#{nearest teacher}#0
+Advance token to nearest Utility. If unowned, you may buy it from the Bank. If owned, throw dice and pay owner a total ten times amount thrown.#10*roll#{nearest utility}#0
+Bank pays you dividend of €50#50##0
+Get out of Study Hall for free!#0##1
+Go back three spaces#0#{position}-3#0
+Go to Study Hall. Go directly to Study Hall, do not pass Go, do not collect €200#0#jail#0
+Make general repairs on all your furniture. For each chair pay 25; for each table pay €100#-(40*{len(players[turn].chairs)}+115*{len(players[turn].tables)}##0
+Running fine! Pay €15#-15##0
+Talk to {3rd teacher}#200#{3rd teacher}#0
+You're elected school president. Pay each player €50#-50*playerCount##0
+Your furniture loan matures. Collect €150#150##0

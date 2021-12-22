@@ -18,7 +18,7 @@ def initialize(cardType):
 
     cardArr = []
     for line in split: # loops through each line
-        lineArr = line.split(',') # array of elements in each card
+        lineArr = line.split('#') # array of elements in each card
         instance = card(lineArr[0],goLocation=lineArr[2], jailFree=bool(lineArr[3])) # creates a card object, leaves 'monetary gain' undefined
         # TODO: Add monetary gain in-game when the card is drawn. Use "".format(something=value) for formatting, and eval() to evaluate expression
 

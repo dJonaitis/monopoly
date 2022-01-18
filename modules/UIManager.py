@@ -1,12 +1,14 @@
-from email.header import Header
 import tkinter as tk
-from functools import partial
-
-from modules.player import Player # for passing functions and their args
+from functools import partial # for passing functions and their args
+from . import game
 
 HEADER1 = ("Arial", 24)
 HEADER2 = ("Arial", 18)
 PARAGRAPH = ("Arial", 12)
+
+RED = ( 255, 0, 0)
+BLACK = ( 0, 0, 0)
+WHITE = ( 255, 255, 255)
 
 def ClearWindow(window):
   for widget in window.winfo_children(): # for each element in page
@@ -54,14 +56,28 @@ def OpenPlayerSelect(window):
   tk.Button(window, text='Continue', command=partial(OpenGameWindow, window)).pack()
   tk.Button(window, text='Back', command=partial(OpenMenuWindow, window)).pack()
 
+
+def LoadPropertyUI(window):
   pass
 
 # the main board window; where the magic happens:
 def OpenGameWindow(window):
   ClearWindow(window)
 
-  tk.Label(window, text="[Monopoly Board Here]", font=HEADER1).pack()
+  tk.Label(window, text="Monopoly", font=HEADER1).pack()
 
+  for i in range(len(game.tiles)):
+    t = game.tiles[i] # tile instance
+
+    if (t.type == "property"):
+      game.tiles[i].label = tk.Label(text=t.name, fg=t.property.color, font=PARAGRAPH)
+      # game.tiles[i].label = tk.Label(text=t.name, font=PARAGRAPH)
+    else:
+      game.tiles[i].label = tk.Label(text=t.name, font=PARAGRAPH)
+
+    game.tiles[i].label.pack()
+
+  LoadPropertyUI(window)
   # TODO: Start the game somehow???
 
   OpenStatWindow(window) # separate window for stats: balance, properties owned, etc.

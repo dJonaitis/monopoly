@@ -29,9 +29,12 @@ tiles = {**tiles, **tilesManager.initializeMisc()} # adds the rest of the tiles 
 # print(tiles["1"].property.description)
 
 icons = [] # must be defined in the selection screen, when choosing icons
-players = playerManager.initialize(icons)
 
 # print(cards["chest"][2].description)
+
+def LoadPlayers(icons):
+  global players
+  players = playerManager.initialize(icons)
 
 """ Game Logic """
 def EndTurn():

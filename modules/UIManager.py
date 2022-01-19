@@ -15,19 +15,8 @@ def ClearWindow(window):
     widget.destroy() # destroy it
   return window
 
-
 def Exit(window):
   window.destroy() # closes the window
-
-def OpenStatWindow(window):
-  statWindow = tk.Toplevel(window) # idk what this does
-  statWindow.title('Stats')
-  statWindow.geometry('200x405')
-
-  tk.Label(statWindow, text="Your stats", font=HEADER2).pack()
-  tk.Label(statWindow, text="Balance: 0", font=PARAGRAPH).pack()
-  tk.Label(statWindow, text="Your property", font=HEADER2).pack()
-  tk.Label(statWindow, text="(None)", font=PARAGRAPH).pack()
 
 def OpenPlayerSelect(window):
   counter = 2 # used for tracking how many players needed
@@ -48,7 +37,8 @@ def OpenPlayerSelect(window):
   tk.Label(window, text="Player Select", font=HEADER1).pack()
   tk.Label(window, text="How many players are playing? (Max: 8)", font=HEADER2).pack()
 
-  label = tk.Label(window, text="2", font=PARAGRAPH) # creates label object
+  label = tk.Label(window, text="2", font=PARAGRAPH) # creates label object for player counter
+
   tk.Button(window, text='+', command=partial(ChangeCounter,1, label)).pack()
   label.pack() # renders label object after first button object
   tk.Button(window, text='-', command=partial(ChangeCounter,-1, label)).pack()
@@ -59,6 +49,25 @@ def OpenPlayerSelect(window):
 
 def LoadPropertyUI(window):
   pass
+
+def OpenStatWindow(window):
+  statWindow = tk.Toplevel(window) # idk what this does
+  statWindow.title('Stats')
+  statWindow.geometry('200x405')
+
+  tk.Label(statWindow, text="Your stats", font=HEADER2).pack()
+  tk.Label(statWindow, text="Balance: 0", font=PARAGRAPH).pack()
+  tk.Label(statWindow, text="Your property", font=HEADER2).pack()
+  tk.Label(statWindow, text="(None)", font=PARAGRAPH).pack()
+
+def OpenActionWindow(window):
+  statWindow = tk.Toplevel(window) # idk what this does
+  statWindow.title('Actions')
+  statWindow.geometry('200x405')
+
+  tk.Label(statWindow, text="Player [] turn", font=HEADER2).pack()
+  tk.Button(statWindow, text="Roll", command=None).pack()
+  tk.Button(statWindow, text="Buy [property name]", command=None).pack()
 
 # the main board window; where the magic happens:
 def OpenGameWindow(window):
@@ -77,10 +86,13 @@ def OpenGameWindow(window):
 
     game.tiles[i].label.pack()
 
-  LoadPropertyUI(window)
-  # TODO: Start the game somehow???
+  LoadPropertyUI(window) # loads all of the Tiles on the screen
+
+  
+
 
   OpenStatWindow(window) # separate window for stats: balance, properties owned, etc.
+  OpenActionWindow(window)
 
 
 def OpenCreditsWindow(window):

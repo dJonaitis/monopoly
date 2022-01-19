@@ -7,7 +7,7 @@ from functools import partial # for passing functions and their args
 
 mainWindow = tk.Tk()
 mainWindow.title('Monopoly')
-mainWindow.geometry("720x405")
+mainWindow.geometry("720x920")
 
 UIM.OpenMenuWindow(mainWindow) # all the code that is needed. The rest is run through UIManager.py
 

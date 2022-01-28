@@ -13,6 +13,7 @@ def log(playerID, tileID, moveType, landlord):
     if moveType == "moved":
         moveLog.append("p" + str(playerID) + " moved to " + str(tileID))
 
+
 #log(1,5,"bought",0)
 #log(1,27,"paidRent",3)
 #log(1,30,"moved",0)

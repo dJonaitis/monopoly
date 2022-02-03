@@ -1,0 +1,27 @@
+{
+  "name": "monopoly-client",
+  "version": "0.1.0",
+  "description": "The JavaScript (front-end) Client for the VIS Cookie Factory Monopoly Project",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dJonaitis/monopoly.git"
+  },
+  "author": "VD, DJ, SG, VB",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dJonaitis/monopoly/issues"
+  },
+  "homepage": "https://github.com/dJonaitis/monopoly#readme",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0",
+    "express": "^4.17.2"
+  }
+}

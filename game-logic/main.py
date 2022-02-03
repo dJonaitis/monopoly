@@ -20,4 +20,3 @@ players = player.initialize(icons)
 
 """ UI Initialization"""
 
-import uiengine as ui

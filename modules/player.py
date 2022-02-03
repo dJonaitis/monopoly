@@ -75,8 +75,9 @@ class Player:
         if (tile.type== 'property'):
             if (tile.property.ownerID >-1 ):
                 if(tile.property.ownerID != self.playerID):
-                    landlord.balance += tile.property.rentCost #pay rent
-                    self.balance -= tile.property.rentCost 
+                    if(tile.property.mortgage == 0):
+                        landlord.balance += tile.property.rentCost #pay rent
+                        self.balance -= tile.property.rentCost 
                     
             else: #buy property. Note to self: Add prompt to ask if you wanna buy
                 self.buy(tile)
@@ -89,6 +90,14 @@ class Player:
     def buyHouse(self, tile):
         tile.property.houseNumber += 1
         self.balance -= tile.property.housePrice
+
+    def mortgage(self, tile):
+        tile.property.mortgage = 1 # 1 = true
+        self.balance += tile.property.price/2 #gives you half of the base cost (regular mortgaging price)
+
+    def unmortgage(self,tile): #should already only be passed if the player has enough balance
+        tile.property.mortgage = 0 # 0 = false
+        self.balance -= (tile.property.price/2)*1.1 # You have to pay +10% to unmortgage
 
 
 def initialize(icons):
